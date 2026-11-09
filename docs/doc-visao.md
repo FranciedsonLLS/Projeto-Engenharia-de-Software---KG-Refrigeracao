@@ -13,10 +13,10 @@ O projeto propõe um sistema web para centralizar o gerenciamento de clientes, f
 Membro     |     Papel   |   E-mail   |
 ---------  | ----------- | ---------- |
 Profª Karliane Medeiros Ovidio Vale | Cliente (Professora) | karliane.vale@ufrn.br
-Franciedson Lucas Linhares da Silva | _a definir_ (PO / Scrum Master / Developer) | 
-Juan Vyctor Silva Garcia de Oliveira | _a definir_ | 
-Leonardo Breno da Silva Santos | _a definir_ | 
-Nikcael Gidalte Lopes da Silva | _a definir_ | 
+Franciedson Lucas Linhares da Silva | Scrum Master | 
+Juan Vyctor Silva Garcia de Oliveira | Product Owner | 
+Leonardo Breno da Silva Santos | Developer | 
+Nikcael Gidalte Lopes da Silva | Developer | 
 
 ### Matriz de Competências
 

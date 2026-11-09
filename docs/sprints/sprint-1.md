@@ -8,8 +8,8 @@
 
 | # | Item | Responsável | Pts | Status |
 |---|---|---|---|---|
-| T01 | Definir papéis | Todos | 1 | ⬜ |
-| T02 | Definir tecnologia e registrar no README | | 1 | ⬜ |
+| T01 | Definir papéis | Todos | 1 | ✅ |
+| T02 | Definir tecnologia e registrar no README | Franciedson | 1 | 🟡 Next.js definido, falta o banco |
 | T03 | Completar o Documento de Visão | | 2 | ⬜ |
 | T04 | Revisar o Documento de Modelos | | 1 | ⬜ |
 | T05 | Projeto base, banco e tabela `cliente` | | 3 | ⬜ |

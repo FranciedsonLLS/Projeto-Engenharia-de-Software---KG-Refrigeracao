@@ -10,6 +10,7 @@
 ![Status](https://img.shields.io/badge/status-em%20andamento-F2A900?style=for-the-badge)
 ![Sprint](https://img.shields.io/badge/sprint%20atual-Sprint%201-6f42c1?style=for-the-badge)
 ![Produto](https://img.shields.io/badge/produto-CRUD_de_clientes-2ea44f?style=for-the-badge)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 
 [Visão do Produto](#-visão-do-produto) •
 [Tecnologias](#-tecnologias) •
@@ -47,9 +48,9 @@ Este projeto entrega um **sistema web com o CRUD de Clientes**: cadastrar, lista
 
 | Camada | Tecnologia |
 |---|---|
-| Linguagem | _a definir na Sprint 1_ |
-| Framework | _a definir na Sprint 1_ |
-| Banco de dados | _a definir na Sprint 1_ |
+| Framework | [Next.js](https://nextjs.org/) (React) |
+| Linguagem | JavaScript / TypeScript |
+| Banco de dados | _a definir_ |
 | Diagramas | Mermaid |
 | Gestão Scrum | GitHub Issues, Milestones e Projects |
 
@@ -61,14 +62,12 @@ _Instruções serão adicionadas quando o projeto base for criado._
 
 | Papel | Integrante | GitHub |
 |---|---|---|
-| **Product Owner** | _a definir_ | |
-| **Scrum Master** | _a definir_ | |
-| **Developers** | Franciedson Lucas Linhares da Silva | [@FranciedsonLLS](https://github.com/FranciedsonLLS) |
-| | Juan Vyctor Silva Garcia de Oliveira | |
-| | Leonardo Breno da Silva Santos | |
+| **Product Owner** | Juan Vyctor Silva Garcia de Oliveira | |
+| **Scrum Master** | Franciedson Lucas Linhares da Silva | [@FranciedsonLLS](https://github.com/FranciedsonLLS) |
+| **Developers** | Leonardo Breno da Silva Santos | |
 | | Nikcael Gidalte Lopes da Silva | |
 
-> Os papéis de PO e Scrum Master serão definidos no início da Sprint 1 (um integrante acumula o papel com o de Developer).
+> PO e Scrum Master também podem pegar tarefas de desenvolvimento quando necessário.
 
 **Professora / Cliente:** Profª Karliane Medeiros Ovidio Vale
 
