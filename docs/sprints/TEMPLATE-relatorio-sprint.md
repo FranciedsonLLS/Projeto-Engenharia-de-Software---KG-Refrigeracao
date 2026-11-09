@@ -2,7 +2,7 @@
 
 **Período:** dd/mm/aaaa a dd/mm/aaaa
 **Meta da Sprint:** _..._
-**Milestone:** [Sprint N](../../milestones)
+**Milestone:** [Sprint N](../../../../milestones)
 
 ## 📊 Resumo
 | Métrica | Valor |

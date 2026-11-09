@@ -8,10 +8,11 @@
 
 ![Scrum](https://img.shields.io/badge/metodologia-Scrum-0A66C2?style=for-the-badge)
 ![Status](https://img.shields.io/badge/status-em%20andamento-F2A900?style=for-the-badge)
-![Sprint](https://img.shields.io/badge/sprint%20atual-Sprint%200-6f42c1?style=for-the-badge)
+![Sprint](https://img.shields.io/badge/sprint%20atual-Sprint%201-6f42c1?style=for-the-badge)
 ![Produto](https://img.shields.io/badge/produto-CRUD_de_clientes-2ea44f?style=for-the-badge)
 
 [Visão do Produto](#-visão-do-produto) •
+[Tecnologias](#-tecnologias) •
 [Equipe](#-equipe-scrum) •
 [Como trabalhamos](#-como-trabalhamos) •
 [Sprints](#-sprints) •
@@ -40,7 +41,21 @@ A **KG Refrigeração** (Caicó/RN) controla seus clientes e serviços com anota
 
 Este projeto entrega um **sistema web com o CRUD de Clientes**: cadastrar, listar, consultar por CPF, atualizar e inativar clientes, de forma incremental a cada Sprint.
 
-📄 Visão completa: [`docs/visao-do-produto.md`](docs/visao-do-produto.md) · 🗂️ Backlog: [`docs/backlog-inicial.md`](docs/backlog-inicial.md)
+📄 [Documento de Visão](docs/doc-visao.md) · 🧩 [Documento de Modelos](docs/doc-modelos.md) · 🗂️ [Product Backlog](docs/backlog-do-produto.md)
+
+## 🧰 Tecnologias
+
+| Camada | Tecnologia |
+|---|---|
+| Linguagem | _a definir na Sprint 1_ |
+| Framework | _a definir na Sprint 1_ |
+| Banco de dados | _a definir na Sprint 1_ |
+| Diagramas | Mermaid |
+| Gestão Scrum | GitHub Issues, Milestones e Projects |
+
+### ▶️ Como executar
+
+_Instruções serão adicionadas quando o projeto base for criado._
 
 ## 👥 Equipe Scrum
 
@@ -54,9 +69,9 @@ Este projeto entrega um **sistema web com o CRUD de Clientes**: cadastrar, lista
 | | Nikcael Gidalte Lopes da Silva | |
 | | Vinícius Linhares Queiroz | |
 
-> Os papéis de PO e Scrum Master serão definidos na Sprint 0 (um integrante acumula o papel com o de Developer).
+> Os papéis de PO e Scrum Master serão definidos no início da Sprint 1 (um integrante acumula o papel com o de Developer).
 
-**Professora / Stakeholder:** _a definir_
+**Professora / Cliente:** Profª Karliane Medeiros Ovidio Vale
 
 Responsabilidades de cada papel: [`docs/papeis.md`](docs/papeis.md).
 
@@ -66,14 +81,14 @@ Responsabilidades de cada papel: [`docs/papeis.md`](docs/papeis.md).
 flowchart LR
     PB[Product Backlog] --> SP[Sprint Planning]
     SP --> SB[Sprint Backlog]
-    SB --> D[Sprint de 2 semanas<br/>+ Daily Scrum]
+    SB --> D[Sprint de 1 semana<br/>+ Daily Scrum]
     D --> I[Incremento]
     I --> R[Sprint Review]
     R --> RE[Retrospectiva]
     RE --> PB
 ```
 
-- **Duração da Sprint:** 2 semanas
+- **Duração da Sprint:** 1 semana (Review e Retrospectiva em sala com a professora)
 - **Fluxo do board:** `📥 Backlog` → `📋 Sprint Backlog` → `🔨 Em andamento` → `👀 Em revisão` → `✅ Concluído`
 - **Estimativa:** Story Points (sequência de Fibonacci: 1, 2, 3, 5, 8, 13)
 - **Fluxo de código:** uma branch por issue → Pull Request → revisão de pelo menos 1 colega → merge na `main`
@@ -84,15 +99,15 @@ Detalhes em [`docs/eventos-scrum.md`](docs/eventos-scrum.md) e [`CONTRIBUTING.md
 
 | Sprint | Período | Meta da Sprint | Status |
 |---|---|---|---|
-| Sprint 0 | _a definir_ | Formar a equipe, definir o produto e o backlog inicial | 🟡 Em andamento |
-| Sprint 1 | _a definir_ | Cadastrar, listar e consultar clientes | ⚪ Planejada |
-| Sprint 2 | _a definir_ | Atualizar e inativar clientes, interface responsiva | ⚪ Planejada |
-| Sprint 3 | _a definir_ | Testes, integridade dos dados e entrega da v1.0 | ⚪ Planejada |
+| [Sprint 1](docs/sprints/sprint-1.md) | 05/11 a 12/11 (15h) | Projeto configurado, documentação e cadastrar/listar/consultar clientes | 🟡 Em andamento |
+| Sprint 2 | 12/11 a 19/11 (15h) | CRUD de clientes completo, validado e testado | ⚪ Planejada |
+| Apresentação | 23 a 26/11 | Backlogs, reviews, retrospectivas e CRUD rodando | ⚪ Planejada |
 
 ## 📚 Documentação
 
-- [Visão do Produto](docs/visao-do-produto.md)
-- [Product Backlog inicial](docs/backlog-inicial.md)
+- [Documento de Visão](docs/doc-visao.md)
+- [Documento de Modelos](docs/doc-modelos.md)
+- [Product Backlog](docs/backlog-do-produto.md)
 - [Papéis do Scrum](docs/papeis.md)
 - [Eventos do Scrum](docs/eventos-scrum.md)
 - [Definition of Ready](docs/definition-of-ready.md)
