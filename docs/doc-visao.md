@@ -17,7 +17,6 @@ Franciedson Lucas Linhares da Silva | _a definir_ (PO / Scrum Master / Developer
 Juan Vyctor Silva Garcia de Oliveira | _a definir_ | 
 Leonardo Breno da Silva Santos | _a definir_ | 
 Nikcael Gidalte Lopes da Silva | _a definir_ | 
-Vinícius Linhares Queiroz | _a definir_ | 
 
 ### Matriz de Competências
 
@@ -27,7 +26,6 @@ Franciedson Lucas Linhares da Silva | _a preencher_ |
 Juan Vyctor Silva Garcia de Oliveira | _a preencher_ |
 Leonardo Breno da Silva Santos | _a preencher_ |
 Nikcael Gidalte Lopes da Silva | _a preencher_ |
-Vinícius Linhares Queiroz | _a preencher_ |
 
 ## Perfis dos Usuários
 

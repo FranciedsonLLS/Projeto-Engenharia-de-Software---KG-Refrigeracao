@@ -67,7 +67,6 @@ _Instruções serão adicionadas quando o projeto base for criado._
 | | Juan Vyctor Silva Garcia de Oliveira | |
 | | Leonardo Breno da Silva Santos | |
 | | Nikcael Gidalte Lopes da Silva | |
-| | Vinícius Linhares Queiroz | |
 
 > Os papéis de PO e Scrum Master serão definidos no início da Sprint 1 (um integrante acumula o papel com o de Developer).
 
