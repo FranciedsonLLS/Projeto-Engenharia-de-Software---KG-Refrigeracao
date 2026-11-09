@@ -50,9 +50,11 @@ Este projeto entrega um **sistema web com o CRUD de Clientes**: cadastrar, lista
 |---|---|
 | Framework | [Next.js](https://nextjs.org/) (React) |
 | Linguagem | JavaScript / TypeScript |
-| Banco de dados | _a definir_ |
+| Persistência | Arquivo JSON local, acessado por uma **camada de repositório** |
 | Diagramas | Mermaid |
 | Gestão Scrum | GitHub Issues, Milestones e Projects |
+
+> 🗄️ **Banco de dados:** não faz parte deste projeto; será integrado em outra disciplina. Por isso o acesso aos dados fica isolado em um repositório (`ClienteRepository`): hoje ele grava em JSON, e depois basta trocar a implementação por uma de banco, sem mudar telas nem regras de negócio. O modelo de dados já está pronto em [`docs/doc-modelos.md`](docs/doc-modelos.md).
 
 ### ▶️ Como executar
 

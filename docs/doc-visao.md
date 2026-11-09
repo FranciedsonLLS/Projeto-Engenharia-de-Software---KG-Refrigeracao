@@ -142,6 +142,7 @@ RNF05 - Usabilidade | A interface deve ser simples e intuitiva. |
 RNF06 - Compatibilidade | O sistema deve ser acessível em computadores e dispositivos móveis, pelo navegador. |
 RNF07 - Manutenibilidade | O sistema deve permitir futuras alterações sem comprometer seu funcionamento. |
 RNF08 - Backup | O sistema deve possuir mecanismo de backup das informações. |
+RNF09 - Persistência desacoplada | O acesso aos dados deve ficar isolado em uma camada de repositório, permitindo trocar o armazenamento em JSON por um banco de dados no futuro. |
 
 ## Riscos
 

@@ -22,10 +22,10 @@
 | # | Item | Tipo | Pts |
 |---|---|---|---|
 | T01 | Definir papéis (Product Owner, Scrum Master, Developers) | tarefa | 1 |
-| T02 | Definir a tecnologia do projeto e registrar no README | tarefa | 1 |
+| T02 | Definir a tecnologia do projeto (Next.js) e registrar no README | tarefa | 1 |
 | T03 | Completar o Documento de Visão (`docs/doc-visao.md`): e-mails, papéis e competências | documentação | 2 |
 | T04 | Revisar o Documento de Modelos (`docs/doc-modelos.md`) | documentação | 1 |
-| T05 | Criar o projeto base, o banco de dados e a tabela `cliente` | tarefa | 3 |
+| T05 | Criar o projeto base em Next.js e a camada de repositório de clientes (persistência em JSON, pronta para trocar por banco depois) | tarefa | 3 |
 | HU01 | Como **gerente**, quero **cadastrar um cliente** (CPF, nome, telefone, endereço), para centralizar seus dados | história | 3 |
 | HU02 | Como **gerente**, quero **listar os clientes ativos**, para visualizar quem está cadastrado | história | 2 |
 | HU03 | Como **gerente**, quero **consultar um cliente pelo CPF**, para encontrar seus dados rapidamente | história | 2 |
@@ -39,7 +39,7 @@
 | HU04 | Como **gerente**, quero **atualizar os dados de um cliente**, para manter as informações corretas | história | 3 |
 | HU05 | Como **gerente**, quero **inativar um cliente** com confirmação, para remover cadastros sem perder o histórico | história | 3 |
 | HU06 | Como **gerente**, quero uma **interface simples e responsiva**, para usar no computador e no celular | história | 3 |
-| T06 | Garantir integridade: CPF único e campos obrigatórios (RNF04) | tarefa | 2 |
+| T06 | Garantir integridade: CPF único e campos obrigatórios validados na camada de serviço (RNF04) | tarefa | 2 |
 | T07 | Escrever testes do CRUD de clientes | tarefa | 3 |
 | C02 | Review e Retrospectiva da Sprint 2 (18 e 19/11) | cerimônia | — |
 
@@ -56,3 +56,4 @@
 | F01 | Manter Funcionário | US02 / RF02 |
 | F02 | Manter Agendamento, conflitos de horário e status | US03 / RF03 |
 | F03 | Login e logout | US04 / RF04 |
+| F04 | Integrar banco de dados (trocar a implementação do repositório) | Outra disciplina |

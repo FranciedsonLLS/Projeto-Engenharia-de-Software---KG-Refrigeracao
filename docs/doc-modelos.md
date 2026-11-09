@@ -3,6 +3,8 @@
 Neste documento temos o modelo Conceitual (UML) e o modelo de Dados (Entidade-Relacionamento) do Sistema de Gestão de Serviços da KG Refrigeração, além da descrição das entidades e do dicionário de dados. Os diagramas foram feitos com **Mermaid**.
 
 > O escopo implementado nesta disciplina é a entidade **Cliente**. Funcionário e Agendamento estão modelados para a continuidade do projeto.
+>
+> **Persistência:** neste projeto os dados ficam em um arquivo JSON, acessado por uma camada de repositório. O modelo ER e o dicionário de dados abaixo já descrevem o banco de dados que será integrado em outra disciplina.
 
 ## Modelo Conceitual
 
