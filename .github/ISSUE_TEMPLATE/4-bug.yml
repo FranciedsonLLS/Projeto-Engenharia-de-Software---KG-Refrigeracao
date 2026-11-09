@@ -1,0 +1,22 @@
+name: "🐞 Bug"
+description: Algo não está funcionando como deveria.
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: descricao
+    attributes:
+      label: O que aconteceu?
+    validations:
+      required: true
+  - type: textarea
+    id: passos
+    attributes:
+      label: Passos para reproduzir
+      value: |
+        1.
+        2.
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Comportamento esperado

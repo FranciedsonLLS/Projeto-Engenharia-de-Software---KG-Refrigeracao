@@ -1,0 +1,20 @@
+[
+ {"name":"épico","color":"5319E7","description":"Grande objetivo do produto"},
+ {"name":"história","color":"0E8A16","description":"História de usuário"},
+ {"name":"tarefa","color":"1D76DB","description":"Tarefa técnica"},
+ {"name":"bug","color":"D73A4A","description":"Algo não funciona"},
+ {"name":"impedimento","color":"B60205","description":"Bloqueio tratado pelo Scrum Master"},
+ {"name":"melhoria","color":"FBCA04","description":"Ação vinda da Retrospectiva"},
+ {"name":"backlog","color":"C5DEF5","description":"Item do Product Backlog"},
+ {"name":"cerimônia","color":"D4C5F9","description":"Evento do Scrum (Planning, Daily, Review, Retro)"},
+ {"name":"documentação","color":"0075CA","description":"Documentação"},
+ {"name":"prioridade: alta","color":"E99695","description":""},
+ {"name":"prioridade: média","color":"F9D0C4","description":""},
+ {"name":"prioridade: baixa","color":"FEF2C0","description":""},
+ {"name":"pontos: 1","color":"EDEDED","description":"Story Points"},
+ {"name":"pontos: 2","color":"EDEDED","description":"Story Points"},
+ {"name":"pontos: 3","color":"EDEDED","description":"Story Points"},
+ {"name":"pontos: 5","color":"EDEDED","description":"Story Points"},
+ {"name":"pontos: 8","color":"EDEDED","description":"Story Points"},
+ {"name":"pontos: 13","color":"EDEDED","description":"Story Points"}
+]

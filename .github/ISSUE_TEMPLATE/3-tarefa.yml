@@ -1,0 +1,22 @@
+name: "🛠️ Tarefa"
+description: Trabalho técnico que faz parte de uma história.
+title: "[TAREFA] "
+labels: ["tarefa"]
+body:
+  - type: input
+    id: historia
+    attributes:
+      label: História relacionada
+      placeholder: "#"
+  - type: textarea
+    id: descricao
+    attributes:
+      label: O que precisa ser feito
+    validations:
+      required: true
+  - type: textarea
+    id: pronto
+    attributes:
+      label: Checklist
+      value: |
+        - [ ] ...

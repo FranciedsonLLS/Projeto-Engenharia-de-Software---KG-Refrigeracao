@@ -1,0 +1,22 @@
+name: "🏔️ Épico"
+description: Um grande objetivo do produto, que será quebrado em histórias de usuário.
+title: "[ÉPICO] "
+labels: ["épico", "backlog"]
+body:
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo
+      description: Qual valor este épico entrega para o usuário?
+    validations:
+      required: true
+  - type: textarea
+    id: historias
+    attributes:
+      label: Histórias relacionadas
+      description: Liste as histórias (ex. - [ ] #12)
+      placeholder: "- [ ] #"
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Critério de conclusão do épico

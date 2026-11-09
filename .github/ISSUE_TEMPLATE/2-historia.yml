@@ -1,0 +1,38 @@
+name: "📖 História de Usuário"
+description: Uma funcionalidade descrita do ponto de vista do usuário.
+title: "[HU] "
+labels: ["história", "backlog"]
+body:
+  - type: textarea
+    id: historia
+    attributes:
+      label: História
+      value: |
+        **Como** [persona],
+        **quero** [ação],
+        **para** [benefício].
+    validations:
+      required: true
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Critérios de aceitação
+      value: |
+        - [ ] Dado ..., quando ..., então ...
+    validations:
+      required: true
+  - type: dropdown
+    id: pontos
+    attributes:
+      label: Estimativa (Story Points)
+      options: ["1", "2", "3", "5", "8", "13", "Não estimada"]
+  - type: input
+    id: epico
+    attributes:
+      label: Épico
+      placeholder: "#"
+  - type: textarea
+    id: tarefas
+    attributes:
+      label: Tarefas técnicas
+      placeholder: "- [ ] #"

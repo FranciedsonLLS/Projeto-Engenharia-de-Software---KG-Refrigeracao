@@ -1,0 +1,16 @@
+name: "🚧 Impedimento"
+description: Algo que está bloqueando o trabalho do time (tratado pelo Scrum Master).
+title: "[IMPEDIMENTO] "
+labels: ["impedimento"]
+body:
+  - type: textarea
+    id: descricao
+    attributes:
+      label: O que está bloqueando?
+    validations:
+      required: true
+  - type: input
+    id: afetadas
+    attributes:
+      label: Issues afetadas
+      placeholder: "#"
