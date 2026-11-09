@@ -9,7 +9,7 @@
 ![Scrum](https://img.shields.io/badge/metodologia-Scrum-0A66C2?style=for-the-badge)
 ![Status](https://img.shields.io/badge/status-em%20andamento-F2A900?style=for-the-badge)
 ![Sprint](https://img.shields.io/badge/sprint%20atual-Sprint%200-6f42c1?style=for-the-badge)
-![Produto](https://img.shields.io/badge/produto-CRUD%20de%20Clientes-0E8A16?style=for-the-badge)
+![Produto](https://img.shields.io/badge/produto-CRUD__de__clientes-2ea44f?style=for-the-badge)
 
 [Visão do Produto](#-visão-do-produto) •
 [Equipe](#-equipe-scrum) •
