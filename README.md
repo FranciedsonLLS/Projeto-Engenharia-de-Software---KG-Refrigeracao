@@ -64,10 +64,10 @@ _Instruções serão adicionadas quando o projeto base for criado._
 
 | Papel | Integrante | GitHub |
 |---|---|---|
-| **Product Owner** | Juan Vyctor Silva Garcia de Oliveira | |
+| **Product Owner** | Juan Vyctor Silva Garcia de Oliveira | [@Juan-Vyctor](https://github.com/Juan-Vyctor) |
 | **Scrum Master** | Franciedson Lucas Linhares da Silva | [@FranciedsonLLS](https://github.com/FranciedsonLLS) |
-| **Developers** | Leonardo Breno da Silva Santos | |
-| | Nikcael Gidalte Lopes da Silva | |
+| **Developers** | Leonardo Breno da Silva Santos | [@leonardobreno](https://github.com/leonardobreno) |
+| | Nikcael Gidalte Lopes da Silva | [@nikcaellp](https://github.com/nikcaellp) |
 
 > PO e Scrum Master também podem pegar tarefas de desenvolvimento quando necessário.
 
