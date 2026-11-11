@@ -58,7 +58,39 @@ Este projeto entrega um **sistema web com o CRUD de Clientes**: cadastrar, lista
 
 ### ▶️ Como executar
 
-_Instruções serão adicionadas quando o projeto base for criado._
+
+**Pré-requisitos:**
+- Node.js instalado.
+- npm instalado.
+
+**1. Instale as dependências:**
+
+```bash
+npm install
+```
+
+**2. Inicie o servidor de desenvolvimento:**
+
+```bash
+npm run dev
+```
+
+**3. Acesse o sistema no navegador:**
+
+http://localhost:3000
+
+**Outros comandos úteis:**
+
+```bash
+npm run lint
+npm run build
+```
+
+- `npm run lint`: verifica problemas no código.
+- `npm run build`: gera a versão de produção.
+
+**Persistência:** os dados dos clientes são armazenados localmente em `data/clientes.json`.
+
 
 ## 👥 Equipe Scrum
 
