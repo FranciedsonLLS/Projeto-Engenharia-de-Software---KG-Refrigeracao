@@ -14,18 +14,18 @@ Membro     |     Papel   |   E-mail   |
 ---------  | ----------- | ---------- |
 Profª Karliane Medeiros Ovidio Vale | Cliente (Professora) | karliane.vale@ufrn.br
 Franciedson Lucas Linhares da Silva | Scrum Master | 
-Juan Vyctor Silva Garcia de Oliveira | Product Owner | 
-Leonardo Breno da Silva Santos | Developer | 
-Nikcael Gidalte Lopes da Silva | Developer | 
+Juan Vyctor Silva Garcia de Oliveira | Product Owner | juanvyctor.sgo@gmail.com
+Leonardo Breno da Silva Santos | Developer | leonardodbreno@gmail.com
+Nikcael Gidalte Lopes da Silva | Developer | nikcael.lopes.124@ufrn.edu.br
 
 ### Matriz de Competências
 
 Membro     |     Competências   |
 ---------  | ----------- |
 Franciedson Lucas Linhares da Silva | _a preencher_ |
-Juan Vyctor Silva Garcia de Oliveira | _a preencher_ |
-Leonardo Breno da Silva Santos | _a preencher_ |
-Nikcael Gidalte Lopes da Silva | _a preencher_ |
+Juan Vyctor Silva Garcia de Oliveira | PHP com foco no framework Laravel; HTML e CSS; React, Next.js e JavaScript; Python; Dart com Flutter |
+Leonardo Breno da Silva Santos | Python e C++; HTML e CSS para desenvolvimento web; Next.js |
+Nikcael Gidalte Lopes da Silva | Domínio de Python; HTML e CSS para desenvolvimento web; conhecimentos básicos de Next.js |
 
 ## Perfis dos Usuários
 
