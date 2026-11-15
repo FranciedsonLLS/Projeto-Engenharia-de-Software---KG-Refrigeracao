@@ -4,7 +4,7 @@ import ListaClientes from "./components/ListaClientes";
 import { JsonClienteRepository } from "@/lib/repositories/JsonClienteRepository";
 
 // export const dynamic = "force-dynamic";
-
+export const instant = false;
 export default async function Home() {
   const repositorio = new JsonClienteRepository();
   const clientes = await repositorio.listar();
