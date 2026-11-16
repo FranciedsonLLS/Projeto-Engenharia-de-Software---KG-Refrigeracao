@@ -1,7 +1,7 @@
 # 📝 Ata – Sprint Planning – Sprint 1
 
-**Data:** 05/11/2026 · **Duração:** _a preencher_ · **Facilitador(a):** Franciedson (Scrum Master)
-**Presentes:** _a preencher_
+**Data:** 05/11/2026 · **Duração:** 1h · **Facilitador(a):** Franciedson (Scrum Master)
+**Presentes:** Franciedson (Scrum Master), Juan (Product Owner), Leonardo e Nikcael (Developers)
 
 ## Pauta
 1. Definição dos papéis Scrum da equipe
