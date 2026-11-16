@@ -3,7 +3,7 @@
 
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
-
+import type { Cliente } from "@/types/Cliente";
 import { JsonClienteRepository } from "@/lib/repositories/JsonClienteRepository";
 
 const clienteSchema = z.object({
@@ -63,6 +63,50 @@ export async function cadastrarCliente(
         erro instanceof Error
           ? erro.message
           : "Não foi possível cadastrar o cliente.",
+    };
+  }
+}
+
+const cpfConsultaSchema = z
+  .string()
+  .regex(/^\d{11}$/, "Informe um CPF com 11 números.");
+
+type ResultadoConsulta = {
+  cliente: Cliente | null;
+  mensagem: string;
+};
+
+export async function consultarClientePorCpf(
+  cpf: string
+): Promise<ResultadoConsulta> {
+  const validacao = cpfConsultaSchema.safeParse(cpf);
+
+  if (!validacao.success) {
+    return {
+      cliente: null,
+      mensagem: "Informe um CPF válido com 11 números.",
+    };
+  }
+
+  try {
+    const repositorio = new JsonClienteRepository();
+    const cliente = await repositorio.buscarPorCpf(validacao.data);
+
+    if (!cliente) {
+      return {
+        cliente: null,
+        mensagem: "Cliente não encontrado",
+      };
+    }
+
+    return {
+      cliente,
+      mensagem: "",
+    };
+  } catch {
+    return {
+      cliente: null,
+      mensagem: "Não foi possível consultar o cliente.",
     };
   }
 }
