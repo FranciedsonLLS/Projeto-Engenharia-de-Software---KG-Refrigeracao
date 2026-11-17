@@ -1,5 +1,6 @@
 
 import FormularioCliente from "./components/FormularioCliente";
+import ConsultaCliente from "./components/ConsultaCliente";
 import ListaClientes from "./components/ListaClientes";
 import { JsonClienteRepository } from "@/lib/repositories/JsonClienteRepository";
 
@@ -23,7 +24,7 @@ export default async function Home() {
         </header>
 
         <FormularioCliente />
-
+        <ConsultaCliente />
         <ListaClientes clientes={clientes} />
       </section>
     </main>
