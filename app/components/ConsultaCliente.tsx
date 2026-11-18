@@ -3,7 +3,6 @@
 
 import {
   useActionState,
-  useEffect,
   useState,
   type FormEvent,
 } from "react";
@@ -29,16 +28,23 @@ export default function ConsultaCliente() {
   const [editando, setEditando] = useState(false);
 
 const [estadoAtualizacao, formAction, pendente] = useActionState(
-  atualizarCliente,
+  atualizarClienteComEstado,
   estadoInicial
 );
 
-useEffect(() => {
-  if (estadoAtualizacao.sucesso && estadoAtualizacao.cliente) {
-    setCliente(estadoAtualizacao.cliente);
+async function atualizarClienteComEstado(
+  estadoAnterior: EstadoAtualizacao,
+  formData: FormData
+): Promise<EstadoAtualizacao> {
+  const resultado = await atualizarCliente(estadoAnterior, formData);
+
+  if (resultado.sucesso && resultado.cliente) {
+    setCliente(resultado.cliente);
     setEditando(false);
   }
-}, [estadoAtualizacao]);
+
+  return resultado;
+}
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
