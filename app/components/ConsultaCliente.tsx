@@ -53,7 +53,7 @@ async function atualizarClienteComEstado(
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-
+    setMensagemInativacao("");
     setCliente(null);
     setMensagem("");
     setEditando(false);
