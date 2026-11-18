@@ -110,3 +110,79 @@ export async function consultarClientePorCpf(
     };
   }
 }
+const atualizarClienteSchema = z.object({
+  cpf: z.string().regex(/^\d{11}$/, "CPF inválido."),
+  nome: z.string().trim().min(1, "Informe o nome.").max(150),
+  telefone: z.string().trim().min(1, "Informe o telefone.").max(15),
+  endereco: z.string().trim().min(1, "Informe o endereço.").max(250),
+});
+
+export type EstadoAtualizacao = {
+  sucesso: boolean;
+  mensagem: string;
+  cliente?: Cliente;
+  erros?: {
+    cpf?: string[];
+    nome?: string[];
+    telefone?: string[];
+    endereco?: string[];
+  };
+};
+
+export async function atualizarCliente(
+  estadoAnterior: EstadoAtualizacao,
+  formData: FormData
+): Promise<EstadoAtualizacao> {
+  const dados = {
+    cpf: String(formData.get("cpf") ?? ""),
+    nome: String(formData.get("nome") ?? ""),
+    telefone: String(formData.get("telefone") ?? ""),
+    endereco: String(formData.get("endereco") ?? ""),
+  };
+
+  const validacao = atualizarClienteSchema.safeParse(dados);
+
+  if (!validacao.success) {
+    return {
+      sucesso: false,
+      mensagem: "Verifique os campos informados.",
+      erros: validacao.error.flatten().fieldErrors,
+    };
+  }
+
+  try {
+    const repositorio = new JsonClienteRepository();
+
+    const clienteAtualizado = await repositorio.atualizar(
+      validacao.data.cpf,
+      {
+        nome: validacao.data.nome,
+        telefone: validacao.data.telefone,
+        endereco: validacao.data.endereco,
+      }
+    );
+
+    if (!clienteAtualizado) {
+      return {
+        sucesso: false,
+        mensagem: "Cliente não encontrado.",
+      };
+    }
+
+    revalidatePath("/");
+
+    return {
+      sucesso: true,
+      mensagem: "Dados do cliente atualizados com sucesso!",
+      cliente: clienteAtualizado,
+    };
+  } catch (erro) {
+    return {
+      sucesso: false,
+      mensagem:
+        erro instanceof Error
+          ? erro.message
+          : "Não foi possível atualizar o cliente.",
+    };
+  }
+}
