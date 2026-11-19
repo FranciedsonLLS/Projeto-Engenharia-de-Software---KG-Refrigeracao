@@ -186,3 +186,56 @@ export async function atualizarCliente(
     };
   }
 }
+const cpfInativacaoSchema = z
+  .string()
+  .regex(/^\d{11}$/, "Informe um CPF com 11 números.");
+
+type ResultadoInativacao = {
+  sucesso: boolean;
+  mensagem: string;
+  cliente?: Cliente;
+};
+
+export async function inativarCliente(
+  cpf: string
+): Promise<ResultadoInativacao> {
+  const validacao = cpfInativacaoSchema.safeParse(cpf);
+
+  if (!validacao.success) {
+    return {
+      sucesso: false,
+      mensagem: "Informe um CPF válido.",
+    };
+  }
+
+  try {
+    const repositorio = new JsonClienteRepository();
+
+    const clienteInativado = await repositorio.inativar(
+      validacao.data
+    );
+
+    if (!clienteInativado) {
+      return {
+        sucesso: false,
+        mensagem: "Cliente não encontrado.",
+      };
+    }
+
+    revalidatePath("/");
+
+    return {
+      sucesso: true,
+      mensagem: "Cliente inativado com sucesso!",
+      cliente: clienteInativado,
+    };
+  } catch (erro) {
+    return {
+      sucesso: false,
+      mensagem:
+        erro instanceof Error
+          ? erro.message
+          : "Não foi possível inativar o cliente.",
+    };
+  }
+}

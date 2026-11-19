@@ -10,15 +10,15 @@ import {
 import {
   atualizarCliente,
   consultarClientePorCpf,
+  inativarCliente,
   type EstadoAtualizacao,
 } from "@/app/actions";
-import type { Cliente } from "@/types/Cliente";
 
+import type { Cliente } from "@/types/Cliente";
 const estadoInicial: EstadoAtualizacao = {
   sucesso: false,
   mensagem: "",
 };
-
 export default function ConsultaCliente() {
   const [cpf, setCpf] = useState("");
   const [cliente, setCliente] = useState<Cliente | null>(null);
@@ -27,10 +27,15 @@ export default function ConsultaCliente() {
 
   const [editando, setEditando] = useState(false);
 
-const [estadoAtualizacao, formAction, pendente] = useActionState(
-  atualizarClienteComEstado,
-  estadoInicial
-);
+  // Estados da HU05
+  const [inativando, setInativando] = useState(false);
+  const [mensagemInativacao, setMensagemInativacao] = useState("");
+
+  // Estado da HU04
+  const [estadoAtualizacao, formAction, pendente] = useActionState(
+    atualizarClienteComEstado,
+    estadoInicial
+  );
 
 async function atualizarClienteComEstado(
   estadoAnterior: EstadoAtualizacao,
@@ -48,7 +53,7 @@ async function atualizarClienteComEstado(
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-
+    setMensagemInativacao("");
     setCliente(null);
     setMensagem("");
     setEditando(false);
@@ -70,6 +75,36 @@ async function atualizarClienteComEstado(
       "$1.$2.$3-$4"
     );
   }
+  async function handleInativarCliente() {
+  if (!cliente || cliente.status !== "ATIVO") {
+    return;
+  }
+
+  const confirmado = window.confirm(
+    `Deseja realmente inativar o cliente ${cliente.nome}?`
+  );
+
+  if (!confirmado) {
+    return;
+  }
+
+  setInativando(true);
+  setMensagemInativacao("");
+
+  try {
+    const resultado = await inativarCliente(
+      cliente.cpf.replace(/\D/g, "")
+    );
+
+    setMensagemInativacao(resultado.mensagem);
+
+    if (resultado.sucesso && resultado.cliente) {
+      setCliente(resultado.cliente);
+    }
+  } finally {
+    setInativando(false);
+  }
+}
 
   return (
     <section className="mb-8 rounded-lg border border-gray-200 p-6">
@@ -134,12 +169,12 @@ async function atualizarClienteComEstado(
           </p>
         </div>
 
-       {estadoAtualizacao.sucesso &&
-        estadoAtualizacao.cliente?.cpf === cliente.cpf && (
-         <p className="mt-3 text-sm text-green-700" role="status">
-          {estadoAtualizacao.mensagem}
-        </p>
-      )}
+        {estadoAtualizacao.sucesso &&
+          estadoAtualizacao.cliente?.cpf === cliente.cpf && (
+            <p className="mt-3 text-sm text-green-700" role="status">
+              {estadoAtualizacao.mensagem}
+            </p>
+          )}
 
         <button
           type="button"
@@ -152,10 +187,10 @@ async function atualizarClienteComEstado(
     ) : (
       <form action={formAction} className="space-y-4">
         <input
-  type="hidden"
-  name="cpf"
-  value={cliente.cpf.replace(/\D/g, "")}
-/>
+          type="hidden"
+          name="cpf"
+          value={cliente.cpf.replace(/\D/g, "")}
+        />
 
         <div>
           <label htmlFor="editar-nome" className="mb-1 block font-medium">
@@ -250,9 +285,33 @@ async function atualizarClienteComEstado(
         </div>
       </form>
     )}
+
+    {cliente.status === "ATIVO" && (
+      <button
+        type="button"
+        onClick={handleInativarCliente}
+        disabled={inativando}
+        className="ml-3 mt-4 rounded-md bg-red-600 px-5 py-2 text-white hover:bg-red-700 disabled:opacity-50"
+      >
+        {inativando ? "Inativando..." : "Inativar cliente"}
+      </button>
+    )}
+
+    {mensagemInativacao && (
+      <p
+        className={`mt-3 text-sm ${
+          cliente.status === "INATIVO"
+            ? "text-green-700"
+            : "text-red-600"
+        }`}
+        role="status"
+      >
+        {mensagemInativacao}
+      </p>
+    )}
   </div>
 )}
 
-    </section>
-  );
+</section>
+);
 }
