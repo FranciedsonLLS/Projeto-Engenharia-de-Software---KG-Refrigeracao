@@ -24,13 +24,13 @@ export default async function Home() {
 
           <nav
             aria-label="Navegação principal"
-            className="mt-6 overflow-x-auto border-t border-gray-200 pt-4"
+            className="mt-6 overflow-x-auto border-t border-gray-200 pt-4 pb-3"
           >
             <ul className="flex min-w-max gap-2 sm:gap-4">
               <li>
                 <a
                   href="#cadastro"
-                  className="inline-block select-none rounded-lg bg-blue-700 px-4 py-2 text-sm font-medium text-white hover:bg-blue-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                  className="inline-block select-none whitespace-nowrap rounded-lg bg-blue-700 px-4 py-2 text-sm font-medium text-white hover:bg-blue-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                 >
                   Cadastro
                 </a>
@@ -39,7 +39,7 @@ export default async function Home() {
               <li>
                 <a
                   href="#consulta"
-                  className="inline-block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                  className="inline-block select-none whitespace-nowrap rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                 >
                   Consulta
                 </a>
@@ -48,7 +48,7 @@ export default async function Home() {
               <li>
                 <a
                   href="#clientes"
-                  className="inline-block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                  className="inline-block select-none whitespace-nowrap rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                 >
                   Clientes
                 </a>
