@@ -19,106 +19,116 @@ export default function FormularioCliente() {
   );
 
   return (
-    <form action={formAction} className="space-y-5">
-      <div>
-        <label htmlFor="cpf" className="mb-1 block font-medium">
-          CPF
-        </label>
-        <input
-          id="cpf"
-          name="cpf"
-          type="text"
-          placeholder="000.000.000-00"
-          required
-          maxLength={14}
-          className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3"
-        />
-        {estado.erros?.cpf && (
-          <p className="mt-1 text-sm text-red-600">
-            {estado.erros.cpf[0]}
+    <section
+      id="cadastro"
+      className="scroll-mt-6 rounded-lg border border-gray-200 bg-white p-4 sm:p-6"
+    >
+      <h2 className="mb-5 text-xl font-semibold">
+        Cadastrar cliente
+      </h2>
+
+      <form action={formAction} className="space-y-5">
+        <div>
+          <label htmlFor="cpf" className="mb-1 block font-medium">
+            CPF
+          </label>
+          <input
+            id="cpf"
+            name="cpf"
+            type="text"
+            placeholder="000.000.000-00"
+            required
+            maxLength={14}
+            className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3"
+          />
+          {estado.erros?.cpf && (
+            <p className="mt-1 text-sm text-red-600">
+              {estado.erros.cpf[0]}
+            </p>
+          )}
+        </div>
+
+        <div>
+          <label htmlFor="nome" className="mb-1 block font-medium">
+            Nome
+          </label>
+          <input
+            id="nome"
+            name="nome"
+            type="text"
+            placeholder="Nome completo"
+            required
+            maxLength={150}
+            className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3"
+          />
+          {estado.erros?.nome && (
+            <p className="mt-1 text-sm text-red-600">
+              {estado.erros.nome[0]}
+            </p>
+          )}
+        </div>
+
+        <div>
+          <label htmlFor="telefone" className="mb-1 block font-medium">
+            Telefone
+          </label>
+          <input
+            id="telefone"
+            name="telefone"
+            type="tel"
+            placeholder="(00) 00000-0000"
+            required
+            maxLength={15}
+            className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3"
+          />
+          {estado.erros?.telefone && (
+            <p className="mt-1 text-sm text-red-600">
+              {estado.erros.telefone[0]}
+            </p>
+          )}
+        </div>
+
+        <div>
+          <label htmlFor="endereco" className="mb-1 block font-medium">
+            Endereço
+          </label>
+          <input
+            id="endereco"
+            name="endereco"
+            type="text"
+            placeholder="Rua, número, bairro e cidade"
+            required
+            maxLength={250}
+            className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3"
+          />
+          {estado.erros?.endereco && (
+            <p className="mt-1 text-sm text-red-600">
+              {estado.erros.endereco[0]}
+            </p>
+          )}
+        </div>
+
+        {estado.mensagem && (
+          <p
+            className={
+              estado.sucesso
+                ? "text-sm text-green-700"
+                : "text-sm text-red-600"
+            }
+            role="status"
+          >
+            {estado.mensagem}
           </p>
         )}
-      </div>
 
-      <div>
-        <label htmlFor="nome" className="mb-1 block font-medium">
-          Nome
-        </label>
-        <input
-          id="nome"
-          name="nome"
-          type="text"
-          placeholder="Nome completo"
-          required
-          maxLength={150}
-          className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3"
-        />
-        {estado.erros?.nome && (
-          <p className="mt-1 text-sm text-red-600">
-            {estado.erros.nome[0]}
-          </p>
-        )}
-      </div>
-
-      <div>
-        <label htmlFor="telefone" className="mb-1 block font-medium">
-          Telefone
-        </label>
-        <input
-          id="telefone"
-          name="telefone"
-          type="tel"
-          placeholder="(00) 00000-0000"
-          required
-          maxLength={15}
-          className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3"
-        />
-        {estado.erros?.telefone && (
-          <p className="mt-1 text-sm text-red-600">
-            {estado.erros.telefone[0]}
-          </p>
-        )}
-      </div>
-
-      <div>
-        <label htmlFor="endereco" className="mb-1 block font-medium">
-          Endereço
-        </label>
-        <input
-          id="endereco"
-          name="endereco"
-          type="text"
-          placeholder="Rua, número, bairro e cidade"
-          required
-          maxLength={250}
-          className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3"
-        />
-        {estado.erros?.endereco && (
-          <p className="mt-1 text-sm text-red-600">
-            {estado.erros.endereco[0]}
-          </p>
-        )}
-      </div>
-
-      {estado.mensagem && (
-        <p
-          className={
-            estado.sucesso
-              ? "text-sm text-green-700"
-              : "text-sm text-red-600"
-          }
+        <button
+          type="submit"
+          disabled={pendente}
+          className="w-full rounded-lg bg-blue-700 px-4 py-3 font-semibold text-white hover:bg-blue-800 disabled:opacity-50"
         >
-          {estado.mensagem}
-        </p>
-      )}
-
-      <button
-        type="submit"
-        disabled={pendente}
-        className="w-full rounded-lg bg-blue-700 px-4 py-3 font-semibold text-white hover:bg-blue-800 disabled:opacity-50"
-      >
-        {pendente ? "Cadastrando..." : "Cadastrar cliente"}
-      </button>
-    </form>
+          {pendente ? "Cadastrando..." : "Cadastrar cliente"}
+        </button>
+      </form>
+    </section>
   );
 }
