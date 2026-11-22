@@ -1,50 +1,49 @@
-# 📝 Ata – Sprint Review e Retrospectiva – Sprint 2
+# 🏁 Sprint 2
 
-**Data:** 18 e 19/11/2026 · **Duração:** 40 min (Review: 20 min · Retrospectiva: 20 min) · **Facilitador(a):** Franciedson (Scrum Master)
-**Presentes:** Franciedson (Scrum Master), Juan (Product Owner), Leonardo e Nikcael (Developers), com a professora na Review
-
-## Pauta
-1. Apresentação do que foi entregue na Sprint 2 (Review)
-2. Feedback da professora
-3. Retrospectiva: o que funcionou, o que não funcionou e o que mudar
-4. Itens que passam para a Sprint 3
-
-## Sprint Review
-
+**Período:** 12/11/2026 a 19/11/2026 (até 15h)
 **Meta da Sprint:** CRUD de clientes completo (cadastrar, listar, consultar, atualizar e inativar), validado e pronto para apresentar.
-**Resultado:** meta atingida. CRUD completo com HU01 a HU05 mescladas (HU05 em 19/11, validada pelo PO).
+**Milestone:** [Sprint 2](../../../../milestone/2)
 
-| # | Item | Responsável | Pts | Status | Entrega |
+## 📋 Sprint Backlog (Planning de 12/11)
+
+| # | Item | Issue | Responsável | Pts | Status |
 |---|---|---|---|---|---|
-| HU01 | Cadastrar cliente | Leonardo | 3 | ✅ | PR #28 (mesclado 14/11) |
-| HU02 | Listar clientes ativos | Nikcael | 2 | ✅ | PR #30 (mesclado 16/11) |
-| HU03 | Consultar cliente pelo CPF | Nikcael | 2 | ✅ | PR #31 (mesclado 17/11) |
-| HU04 | Atualizar dados do cliente | Leonardo | 3 | ✅ | PR #32 (mesclado 18/11) |
-| HU05 | Inativar cliente | Nikcael | 3 | ✅ | PR #33 (mesclado 19/11) |
-| T06 | Garantir integridade dos dados (CPF único e obrigatórios) | Leonardo | 2 | ⬜ | #16 |
-| T07 | Escrever testes do CRUD de clientes | Leonardo e Nikcael | 3 | ⬜ | #17 |
-| HU06 | Interface simples e responsiva (se sobrar tempo) | Leonardo e Nikcael | 3 | ⬜ | #15 |
+| HU01 | Cadastrar cliente (vem da Sprint 1) | #8 | Leonardo | 3 | ✅ PR #28 |
+| HU02 | Listar clientes ativos (vem da Sprint 1) | #9 | Nikcael | 2 | ✅ PR #30 |
+| HU03 | Consultar cliente pelo CPF (vem da Sprint 1) | #10 | Nikcael | 2 | ✅ PR #31 |
+| HU04 | Atualizar dados do cliente | #13 | Leonardo | 3 | ✅ PR #32 |
+| HU05 | Inativar cliente | #14 | Nikcael | 3 | ✅ PR #33 |
+| T06 | Garantir integridade dos dados (CPF único e obrigatórios) | #16 | Leonardo | 2 | ⬜ |
+| T07 | Escrever testes do CRUD de clientes | #17 | Leonardo e Nikcael | 3 | ⬜ |
+| HU06 | Interface simples e responsiva (se sobrar tempo) | #15 | Leonardo e Nikcael | 3 | ⬜ |
 
-**Pontos planejados:** 18 · **Pontos entregues:** 13 (5 de 8 itens)
+**Total planejado:** 18 pontos (+3 de HU06 se sobrar tempo)
 
-**Feedback da professora:**
-- _a preencher_
+**Legenda:** ⬜ a fazer · 🔨 em andamento · 👀 em revisão · ✅ concluído
 
-## Retrospectiva
+## 📅 Dailies
+Registradas como comentários na issue **📅 Daily Scrum – Sprint 2** (#18).
 
-| 🟢 Começar | 🔴 Parar | 🔵 Continuar |
-|---|---|---|
-| Revisar PR em até 24h (o #28 esperou 2 dias) | Começar HUs novas só no fim da sprint (HU05 abriu PR em 18/11; T06, T07 e HU06 não começaram) | Revisão cruzada com teste funcional antes do merge |
-| Rodar `npm run lint` antes de abrir o PR | Deixar dias sem daily (14/11 sem registro) | Dailies detalhadas na #18 |
-| Planejar pelo histórico de entrega (S1: 8 pts, S2: 13 pts) | Planejar acima da capacidade (18 pts) | PO revisando PR antes do merge |
+| Data | Registrada? |
+|---|---|
+| 13/11 | ✅ Franciedson |
+| 14/11 | ⬜ sem registro |
+| 15/11 | ✅ Nikcael |
+| 16/11 | ✅ Juan, Leonardo, Nikcael |
+| 17/11 | ✅ Juan, Leonardo |
+| 18/11 | ✅ Franciedson, Leonardo, Juan, Nikcael |
+| 19/11 | ✅ Franciedson, Juan |
 
-## Decisões
-- Itens não concluídos até 19/11 15h voltam para o Product Backlog e entram na Planning da Sprint 3.
-- T06 (#16), T07 (#17) e HU06 (#15) não foram iniciadas e voltam para o Product Backlog.
+## 📊 Resultado
+| Métrica | Valor |
+|---|---|
+| Pontos planejados | 18 |
+| Pontos entregues | 13 (HU01 a HU05) |
+| Itens concluídos | 5 de 8 |
 
-## Ações
-| Ação | Responsável | Prazo |
-|---|---|---|
-| Atualizar `docs/sprints/sprint-2.md` com status, dailies e resultado | Franciedson | 19/11 |
-| Fechar a issue #19 e o milestone Sprint 2 | Franciedson | 19/11 |
-| Planning da Sprint 3: itens pendentes e T08 (#20, apresentação) | Juan (PO) e equipe | 19/11 |
+## 🎤 Sprint Review (18 e 19/11)
+- Meta atingida: CRUD de clientes completo.
+- Feedback da professora: garantir os testes e formalizar bem o que deu certo e o que deu errado em cada sprint.
+
+## 🔁 Retrospectiva
+Detalhes na ata [`docs/atas/2026-11-19-review-retro-sprint-2.md`](../atas/2026-11-19-review-retro-sprint-2.md). O que deu certo e o que deu errado está consolidado em [`docs/licoes-aprendidas.md`](../licoes-aprendidas.md).

@@ -43,7 +43,7 @@ Registradas como comentários na issue **📅 Daily Scrum – Sprint 2** (#18).
 
 ## 🎤 Sprint Review (18 e 19/11)
 - Meta atingida: CRUD de clientes completo.
-- Feedback da professora:
+- Feedback da professora: garantir os testes e formalizar bem o que deu certo e o que deu errado em cada sprint.
 
 ## 🔁 Retrospectiva
-Detalhes na ata `docs/atas/2026-11-19-review-retro-sprint-2.md`.
+Detalhes na ata [`docs/atas/2026-11-19-review-retro-sprint-2.md`](../atas/2026-11-19-review-retro-sprint-2.md). O que deu certo e o que deu errado está consolidado em [`docs/licoes-aprendidas.md`](../licoes-aprendidas.md).

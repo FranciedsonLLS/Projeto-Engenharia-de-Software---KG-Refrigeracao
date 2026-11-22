@@ -131,8 +131,9 @@ Detalhes em [`docs/eventos-scrum.md`](docs/eventos-scrum.md) e [`CONTRIBUTING.md
 
 | Sprint | Período | Meta da Sprint | Status |
 |---|---|---|---|
-| [Sprint 1](docs/sprints/sprint-1.md) | 05/11 a 12/11 (15h) | Projeto configurado, documentação e cadastrar/listar/consultar clientes | 🟡 Em andamento |
-| Sprint 2 | 12/11 a 19/11 (15h) | CRUD de clientes completo, validado e testado | ⚪ Planejada |
+| [Sprint 1](docs/sprints/sprint-1.md) | 05/11 a 12/11 (15h) | Projeto configurado, documentação e cadastrar/listar/consultar clientes | ✅ Concluída (8 de 15 pts) |
+| [Sprint 2](docs/sprints/sprint-2.md) | 12/11 a 19/11 (15h) | CRUD de clientes completo (cadastrar, listar, consultar, atualizar e inativar) | ✅ Concluída (13 de 18 pts) |
+| [Sprint 3](docs/sprints/sprint-3.md) | 19/11 a 26/11 | CRUD com dados validados e testado, e apresentação final pronta | 🟡 Em andamento |
 | Apresentação | 23 a 26/11 | Backlogs, reviews, retrospectivas e CRUD rodando | ⚪ Planejada |
 
 ## 📚 Documentação
@@ -146,6 +147,7 @@ Detalhes em [`docs/eventos-scrum.md`](docs/eventos-scrum.md) e [`CONTRIBUTING.md
 - [Definition of Done](docs/definition-of-done.md)
 - [Relatórios de Sprint](docs/sprints)
 - [Atas de reuniões](docs/atas)
+- [Lições aprendidas por Sprint](docs/licoes-aprendidas.md)
 - [Guia de contribuição](CONTRIBUTING.md)
 
 ---
