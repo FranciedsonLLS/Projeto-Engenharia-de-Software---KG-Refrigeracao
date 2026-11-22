@@ -44,7 +44,7 @@ Registradas como comentários na issue **📅 Daily Scrum – Sprint 1** (#11).
 **Meta da Sprint:** parcialmente atingida. Projeto configurado e documentação entregue; as histórias de cliente (HU01, HU02, HU03) passam para a Sprint 2.
 
 ## 🎤 Sprint Review (11 e 12/11)
-- Feedback da professora: _a preencher_
+- O que deu certo e o que deu errado: [`docs/licoes-aprendidas.md`](../licoes-aprendidas.md)
 - Ata: [`docs/atas/2026-11-12-review-retro-sprint-1.md`](../atas/2026-11-12-review-retro-sprint-1.md)
 
 ## 🔁 Retrospectiva
