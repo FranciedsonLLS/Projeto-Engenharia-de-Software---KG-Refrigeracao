@@ -107,40 +107,47 @@ async function atualizarClienteComEstado(
 }
 
   return (
-    <section className="mb-8 rounded-lg border border-gray-200 p-6">
-      <h2 className="mb-4 text-xl font-semibold">
-        Consultar cliente
-      </h2>
+  
+      <section
+        id="consulta"
+        className="scroll-mt-6 rounded-lg border border-gray-200 bg-white p-4 sm:p-6"
+      >
+        <h2 className="mb-4 text-xl font-semibold">
+          Consultar cliente
+        </h2>
 
-      <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row">
-        <input
-          type="text"
-          inputMode="numeric"
-          maxLength={11}
-          value={cpf}
-          onChange={(event) => {
-            setCpf(event.target.value.replace(/\D/g, "").slice(0, 11));
-            setCliente(null);
-            setMensagem("");
-          }}
-          placeholder="Digite o CPF do cliente"
-          className="flex-1 rounded-md border border-gray-300 px-4 py-2 outline-none focus:border-blue-500"
-        />
-
-        <button
-          type="submit"
-          disabled={cpf.length !== 11 || carregando}
-          className="rounded-md bg-blue-600 px-5 py-2 text-white hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-3 sm:flex-row sm:items-end"
         >
-          {carregando ? "Consultando..." : "Consultar"}
-        </button>
-      </form>
+          <input
+            type="text"
+            inputMode="numeric"
+            maxLength={11}
+            value={cpf}
+            onChange={(event) => {
+              setCpf(event.target.value.replace(/\D/g, "").slice(0, 11));
+              setCliente(null);
+              setMensagem("");
+            }}
+            placeholder="Digite o CPF do cliente"
+            className="min-w-0 flex-1 rounded-lg border border-gray-300 bg-white px-4 py-3 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+          />
 
-      {mensagem && (
-        <p className="mt-4 text-sm text-red-600" role="status">
-          {mensagem}
-        </p>
-      )}
+          <button
+            type="submit"
+            disabled={cpf.length !== 11 || carregando}
+            className="w-full rounded-lg bg-blue-600 px-5 py-3 font-medium text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
+          >
+            {carregando ? "Consultando..." : "Consultar"}
+          </button>
+        </form>
+
+        {mensagem && (
+          <p className="mt-4 text-sm text-red-600" role="status">
+            {mensagem}
+          </p>
+        )}
 
 
 {cliente && (
