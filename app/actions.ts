@@ -6,6 +6,11 @@ import {
   validarCpf,
 } from "@/lib/validations/cpf";
 
+import {
+  validarNome,
+  validarTelefone,
+} from "@/lib/validations/cliente";
+
 import { ClienteService } from "@/lib/services/ClienteService";
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
@@ -20,8 +25,21 @@ const clienteSchema = z.object({
     .max(14, "CPF inválido.")
     .refine(validarCpf, "Informe um CPF válido.")
     .transform(normalizarCpf),
-  nome: z.string().trim().min(1, "Informe o nome.").max(150),
-  telefone: z.string().trim().min(1, "Informe o telefone.").max(15),
+  nome: z
+    .string()
+    .trim()
+    .min(1, "Informe o nome.")
+    .max(150)
+    .refine(validarNome, "Informe um nome válido.")
+    .transform((nome) => nome.replace(/\s+/g, " ")),
+
+  telefone: z
+    .string()
+    .trim()
+    .min(1, "Informe o telefone.")
+    .max(15)
+    .refine(validarTelefone, "Informe um telefone válido.")
+    .transform((telefone) => telefone.replace(/\D/g, "")),
   endereco: z.string().trim().min(1, "Informe o endereço.").max(250),
 });
 
@@ -129,8 +147,21 @@ const atualizarClienteSchema = z.object({
     .string()
     .regex(/^\d{11}$/, "CPF inválido.")
     .refine(validarCpf, "Informe um CPF válido."),
-  nome: z.string().trim().min(1, "Informe o nome.").max(150),
-  telefone: z.string().trim().min(1, "Informe o telefone.").max(15),
+  nome: z
+    .string()
+    .trim()
+    .min(1, "Informe o nome.")
+    .max(150)
+    .refine(validarNome, "Informe um nome válido.")
+    .transform((nome) => nome.replace(/\s+/g, " ")),
+
+  telefone: z
+    .string()
+    .trim()
+    .min(1, "Informe o telefone.")
+    .max(15)
+    .refine(validarTelefone, "Informe um telefone válido.")
+    .transform((telefone) => telefone.replace(/\D/g, "")),
   endereco: z.string().trim().min(1, "Informe o endereço.").max(250),
 });
 

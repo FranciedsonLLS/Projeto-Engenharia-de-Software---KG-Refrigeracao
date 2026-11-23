@@ -1,5 +1,10 @@
 import "server-only";
 
+import {
+  validarNome,
+  validarTelefone,
+} from "@/lib/validations/cliente";
+
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { join } from "node:path";
 
@@ -23,12 +28,12 @@ export class JsonClienteRepository implements ClienteRepository {
       throw new Error("Informe um CPF válido.");
     }
 
-    if (!dados.nome.trim() || dados.nome.trim().length > 150) {
-      throw new Error("O nome deve ter entre 1 e 150 caracteres.");
+    if (!validarNome(dados.nome)) {
+      throw new Error("Informe um nome válido.");
     }
 
-    if (!dados.telefone.trim() || dados.telefone.trim().length > 15) {
-      throw new Error("O telefone deve ter entre 1 e 15 caracteres.");
+    if (!validarTelefone(dados.telefone)) {
+      throw new Error("Informe um telefone válido.");
     }
 
     if (!dados.endereco.trim() || dados.endereco.trim().length > 250) {
