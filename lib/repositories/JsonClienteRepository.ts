@@ -1,4 +1,3 @@
-
 import "server-only";
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
@@ -6,6 +5,10 @@ import { join } from "node:path";
 
 import type { Cliente } from "@/types/Cliente";
 import type { ClienteRepository } from "./ClienteRepository";
+import {
+  normalizarCpf,
+  validarCpf,
+} from "@/lib/validations/cpf";
 
 export class JsonClienteRepository implements ClienteRepository {
   private readonly caminhoArquivo = join(
@@ -13,18 +16,11 @@ export class JsonClienteRepository implements ClienteRepository {
     "data",
     "clientes.json"
   );
-
-  private normalizarCpf(cpf: string): string {
-    return cpf.replace(/\D/g, "");
-  }
-
   private validarDados(
     dados: Pick<Cliente, "cpf" | "nome" | "telefone" | "endereco">
   ): void {
-    const cpf = this.normalizarCpf(dados.cpf);
-
-    if (!/^\d{11}$/.test(cpf)) {
-      throw new Error("O CPF deve possuir exatamente 11 dígitos.");
+    if (!validarCpf(dados.cpf)) {
+      throw new Error("Informe um CPF válido.");
     }
 
     if (!dados.nome.trim() || dados.nome.trim().length > 150) {
@@ -70,7 +66,7 @@ export class JsonClienteRepository implements ClienteRepository {
 
     this.validarDados(dados);
 
-    const cpf = this.normalizarCpf(dados.cpf);
+    const cpf = normalizarCpf(dados.cpf);
 
     const existente = clientes.find(
       (cliente) => cliente.cpf === cpf
@@ -109,7 +105,7 @@ export class JsonClienteRepository implements ClienteRepository {
 
   async buscarPorCpf(cpf: string): Promise<Cliente | null> {
     const clientes = await this.lerDados();
-    const cpfNormalizado = this.normalizarCpf(cpf);
+    const cpfNormalizado = normalizarCpf(cpf);
 
     return (
       clientes.find(
@@ -123,7 +119,7 @@ export class JsonClienteRepository implements ClienteRepository {
     dados: Partial<Pick<Cliente, "nome" | "telefone" | "endereco">>
   ): Promise<Cliente | null> {
     const clientes = await this.lerDados();
-    const cpfNormalizado = this.normalizarCpf(cpf);
+    const cpfNormalizado = normalizarCpf(cpf);
 
     const indice = clientes.findIndex(
       (cliente) => cliente.cpf === cpfNormalizado
@@ -149,7 +145,7 @@ export class JsonClienteRepository implements ClienteRepository {
 
   async inativar(cpf: string): Promise<Cliente | null> {
     const clientes = await this.lerDados();
-    const cpfNormalizado = this.normalizarCpf(cpf);
+    const cpfNormalizado = normalizarCpf(cpf);
 
     const cliente = clientes.find(
       (cliente) => cliente.cpf === cpfNormalizado

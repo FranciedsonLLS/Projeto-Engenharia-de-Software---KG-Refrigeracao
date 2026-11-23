@@ -1,13 +1,25 @@
 
 "use server";
 
+import {
+  normalizarCpf,
+  validarCpf,
+} from "@/lib/validations/cpf";
+
+import { ClienteService } from "@/lib/services/ClienteService";
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import type { Cliente } from "@/types/Cliente";
 import { JsonClienteRepository } from "@/lib/repositories/JsonClienteRepository";
 
 const clienteSchema = z.object({
-  cpf: z.string().trim().min(1, "Informe o CPF.").max(14),
+  cpf: z
+    .string()
+    .trim()
+    .min(1, "Informe o CPF.")
+    .max(14, "CPF inválido.")
+    .refine(validarCpf, "Informe um CPF válido.")
+    .transform(normalizarCpf),
   nome: z.string().trim().min(1, "Informe o nome.").max(150),
   telefone: z.string().trim().min(1, "Informe o telefone.").max(15),
   endereco: z.string().trim().min(1, "Informe o endereço.").max(250),
@@ -47,8 +59,9 @@ export async function cadastrarCliente(
 
   try {
     const repositorio = new JsonClienteRepository();
+    const servico = new ClienteService(repositorio);
 
-    await repositorio.criar(validacao.data);
+    await servico.cadastrar(validacao.data);
 
     revalidatePath("/");
 
@@ -69,7 +82,8 @@ export async function cadastrarCliente(
 
 const cpfConsultaSchema = z
   .string()
-  .regex(/^\d{11}$/, "Informe um CPF com 11 números.");
+  .regex(/^\d{11}$/, "Informe um CPF com 11 números.")
+  .refine(validarCpf, "Informe um CPF válido.");
 
 type ResultadoConsulta = {
   cliente: Cliente | null;
@@ -111,7 +125,10 @@ export async function consultarClientePorCpf(
   }
 }
 const atualizarClienteSchema = z.object({
-  cpf: z.string().regex(/^\d{11}$/, "CPF inválido."),
+  cpf: z
+    .string()
+    .regex(/^\d{11}$/, "CPF inválido.")
+    .refine(validarCpf, "Informe um CPF válido."),
   nome: z.string().trim().min(1, "Informe o nome.").max(150),
   telefone: z.string().trim().min(1, "Informe o telefone.").max(15),
   endereco: z.string().trim().min(1, "Informe o endereço.").max(250),
@@ -188,7 +205,8 @@ export async function atualizarCliente(
 }
 const cpfInativacaoSchema = z
   .string()
-  .regex(/^\d{11}$/, "Informe um CPF com 11 números.");
+  .regex(/^\d{11}$/, "Informe um CPF com 11 números.")
+  .refine(validarCpf, "Informe um CPF válido.");
 
 type ResultadoInativacao = {
   sucesso: boolean;
