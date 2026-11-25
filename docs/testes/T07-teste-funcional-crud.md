@@ -1,10 +1,10 @@
-# T07 — Relatório de Testes Funcionais do CRUD de Clientes
+# T07 — Relatório de Testes do CRUD de Clientes
 
 **Projeto:** KG Refrigeração  
 **Atividade:** T07 — Teste funcional do CRUD  
 **Data de execução:** 24/11/2026  
 **Etapa do projeto:** Sprint 3  
-**Release:** Não Definida  
+**Release:** Não definida  
 **Branch:** `test/t07-teste-funcional-crud`
 
 ---
@@ -13,10 +13,23 @@
 
 | Informação | Descrição |
 |---|---|
-| Tipo de teste | Teste funcional manual |
+| Tipo de teste | Teste manual |
 | Ambiente | Aplicação web em ambiente local |
 | Persistência de dados | Arquivo JSON |
 | Funcionalidades avaliadas | Cadastro, consulta, atualização e inativação de clientes |
+
+### 1.2. Responsável pela execução dos testes
+
+| Informação | Descrição |
+|---|---|
+| Nome | Nikcael Gildalte Lopes da Silva |
+| Perfil no projeto | Desenvolvedor |
+| GitHub | [github.com/nikcaellp](https://github.com/nikcaellp) |
+| Responsabilidade | Planejamento, execução e registro dos testes funcionais do CRUD de clientes |
+| Atividade relacionada | T07 — Teste funcional do CRUD |
+
+
+
 ## 2. Objetivo
 
 Verificar o funcionamento das operações de gerenciamento de clientes do sistema KG Refrigeração, abrangendo cadastro, consulta por CPF, atualização e inativação.
@@ -29,12 +42,6 @@ Os testes também buscam avaliar o comportamento do sistema durante a execução
 
 **Objetivo:** verificar se o sistema permite cadastrar um novo cliente.
 
-**Procedimento executado:** preenchimento dos campos do formulário de cadastro e envio das informações.
-
-**Resultado esperado:** o sistema deve cadastrar o cliente e disponibilizá-lo na listagem.
-
-**Resultado obtido:** o cadastro foi realizado com sucesso, e o cliente foi disponibilizado na listagem.
-
 **Dados de teste:**
 
 | Campo | Exemplo |
@@ -42,6 +49,12 @@ Os testes também buscam avaliar o comportamento do sistema durante a execução
 | Nome | João da Silva |
 | CPF | 587.590.191-82 |
 | Telefone | (84) 99999-0000 |
+
+**Procedimento executado:** preenchimento dos campos do formulário de cadastro e envio das informações.
+
+**Resultado esperado:** o sistema deve cadastrar o cliente e disponibilizá-lo na listagem.
+
+**Resultado obtido:** o cadastro foi realizado com sucesso, e o cliente foi disponibilizado na listagem.
 
 **Status:** APROVADO.
 
@@ -143,7 +156,6 @@ Os testes também buscam avaliar o comportamento do sistema durante a execução
 **Resultado obtido:** o sistema permitiu o cadastro de dois clientes diferentes utilizando o mesmo número de telefone e DDD.
 
 **Status:** COMPORTAMENTO IDENTIFICADO — regra de negócio a definir.
-
 
 ## 4. Observações e oportunidades de melhoria
 
